@@ -1,6 +1,7 @@
 package com.example.radiobutton1;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,4 +20,8 @@ public class after_button extends AppCompatActivity {
         TextView txvsheets = findViewById(R.id.txv2);
         txvsheets.setText(outputStr);
     }
+    public void backButtonClicked(View view) {
+        finish(); // 关闭当前 activity
+    }
+
 }

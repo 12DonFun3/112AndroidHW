@@ -18,6 +18,19 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.036" />
 
+
+    <EditText
+        android:id="@+id/etTickets"
+        android:layout_width="61dp"
+        android:layout_height="45dp"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.651"
+        app:layout_constraintStart_toEndOf="@+id/txvsheets"
+        app:layout_constraintTop_toBottomOf="@+id/rgType"
+        app:layout_constraintVertical_bias="0.059" />
+
     <RadioGroup
         android:id="@+id/rgGender"
         android:layout_width="wrap_content"
@@ -72,14 +85,14 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="101dp"
+        android:layout_height="48dp"
         android:layout_marginTop="120dp"
         android:onClick="button_Click"
         android:text="確認"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.461"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rgType"
         app:layout_constraintVertical_bias="0.0" />
@@ -115,6 +128,19 @@
         app:layout_constraintStart_toEndOf="@+id/txvsheets"
         app:layout_constraintTop_toBottomOf="@+id/rgType"
         app:layout_constraintVertical_bias="0.077" />
+
+    <TextView
+        android:id="@+id/txvshow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="212dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

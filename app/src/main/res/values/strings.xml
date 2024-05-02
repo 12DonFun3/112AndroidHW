@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">BuyTickets2024</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="regularticket">Regular Ticket</string>
+    <string name="childticket">Children Ticket</string>
+    <string name="studentticket">Student Ticket</string>
+    <string name="confirm">Confirm</string>
+    <string name="numberOfTickets">Count：</string>
+    <string name="ticketTYpe">Ticket Type：</string>
+    <string name="gender">Gender：</string>
+    <string name="total">Total：</string>
+</resources>

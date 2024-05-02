@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">買票</string>
+    <string name="male">南</string>
+    <string name="female">女</string>
+    <string name="regularticket">全票</string>
+    <string name="childticket">童票</string>
+    <string name="studentticket">學生票</string>
+    <string name="confirm">確認</string>
+    <string name="numberOfTickets">漂亮</string>
+    <string name="ticketTYpe">票種</string>
+    <string name="gender">性別</string>
+    <string name="total">共</string>
+</resources>

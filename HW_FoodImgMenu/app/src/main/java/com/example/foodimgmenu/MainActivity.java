@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 output1.setVisibility(isChecked ? ImageView.VISIBLE : ImageView.GONE);
-                updateOrderText();
+                //updateOrderText();
             }
         });
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 output2.setVisibility(isChecked ? ImageView.VISIBLE : ImageView.GONE);
-                updateOrderText();
+                //updateOrderText();
             }
         });
 
@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 output3.setVisibility(isChecked ? ImageView.VISIBLE : ImageView.GONE);
-                updateOrderText();
+                //updateOrderText();
             }
         });
 
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 output4.setVisibility(isChecked ? ImageView.VISIBLE : ImageView.GONE);
-                updateOrderText();
+                //updateOrderText();
             }
         });
     }

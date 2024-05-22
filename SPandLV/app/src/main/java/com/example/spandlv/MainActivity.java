@@ -1,20 +1,18 @@
 package com.example.spandlv;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
-import androidx.annotation.NonNull;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -104,23 +102,23 @@ public class MainActivity extends AppCompatActivity {
                 + "Drink: " + selectedDrink;
         tvSelection.setText(selection);
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.adjustmenu, menu);
+        getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
-    @Override
+    @@Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.Send) {
-            // 点击“送出”按钮时跳转到 ConfirmationActivity
-            Intent intent = new Intent(MainActivity.this, ConfirmationActivity.class);
+            // 在这里添加“送出”按钮的点击逻辑
+            Intent intent = new Intent(MainActivity.this, SendActivity.class);
             startActivity(intent);
             return true;
         } else if (itemId == R.id.Cancel) {
-            // 点击“取消”按钮时清除所选项
+            // 在这里添加“取消”按钮的点击逻辑
             selectedMainCourse = "";
             selectedSideDish = "";
             selectedDrink = "";
@@ -129,6 +127,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 
 }

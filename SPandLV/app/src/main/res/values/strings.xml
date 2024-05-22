@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">SpinnerListViewDemo</string>
+    <string-array name="meal_types">
+        <item>主餐</item>
+        <item>附餐</item>
+        <item>飲料</item>
+    </string-array>
+    <string-array name="main_courses">
+        <item>牛排</item>
+        <item>雞排</item>
+        <item>豬排</item>
+    </string-array>
+    <string-array name="side_dishes">
+        <item>沙拉</item>
+        <item>濃湯</item>
+        <item>蛋糕</item>
+    </string-array>
+    <string-array name="drinks">
+        <item>可樂</item>
+        <item>水</item>
+        <item>酒</item>
+    </string-array>
+</resources>

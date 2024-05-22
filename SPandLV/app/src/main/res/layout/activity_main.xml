@@ -10,7 +10,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="選擇餐食類型：" />
+        android:text="選擇餐點類型：" />
 
     <Spinner
         android:id="@+id/spinnerMealType"
@@ -26,10 +26,11 @@
         android:layout_marginBottom="16dp" />
 
     <TextView
-        android:id="@+id/tvSelection"
+        android:id="@+id/txvSelection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="選擇的餐食："
         android:textSize="18sp"
         android:paddingTop="16dp" />
+
 </LinearLayout>

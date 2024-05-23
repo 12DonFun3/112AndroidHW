@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -16,6 +17,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    // Other variable declarations
     private Spinner spinnerMealType;
     private ListView listViewItems;
     private TextView tvSelection;
@@ -28,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Initialize variables
         mealTypes = getResources().getStringArray(R.array.meal_types);
         mainCourses = getResources().getStringArray(R.array.main_courses);
         sideDishes = getResources().getStringArray(R.array.side_dishes);
@@ -97,28 +100,38 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void updateSelection() {
-        String selection = "Main Course: " + selectedMainCourse + "\n"
-                + "Side Dish: " + selectedSideDish + "\n"
-                + "Drink: " + selectedDrink;
+        String selection = "";
+        if (selectedMainCourse != null && !selectedMainCourse.isEmpty()) {
+            selection += "主餐: " + selectedMainCourse + "\n";
+        }
+        if (selectedSideDish != null && !selectedSideDish.isEmpty()) {
+            selection += "附餐: " + selectedSideDish + "\n";
+        }
+        if (selectedDrink != null && !selectedDrink.isEmpty()) {
+            selection += "飲料: " + selectedDrink;
+        }
         tvSelection.setText(selection);
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
-        getMenuInflater().inflate(R.menu.main_menu, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.adjustmenu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
-    @@Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    @Override
+    public boolean onOptionsItemSelected( MenuItem item) {
         int itemId = item.getItemId();
         if (itemId == R.id.Send) {
-            // 在这里添加“送出”按钮的点击逻辑
             Intent intent = new Intent(MainActivity.this, SendActivity.class);
+            intent.putExtra("主餐", selectedMainCourse);
+            intent.putExtra("附餐", selectedSideDish);
+            intent.putExtra("飲料", selectedDrink);
             startActivity(intent);
             return true;
         } else if (itemId == R.id.Cancel) {
-            // 在这里添加“取消”按钮的点击逻辑
             selectedMainCourse = "";
             selectedSideDish = "";
             selectedDrink = "";
@@ -127,5 +140,4 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }
